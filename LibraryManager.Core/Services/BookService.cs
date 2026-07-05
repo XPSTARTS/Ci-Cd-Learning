@@ -35,22 +35,22 @@ public class BookService : IBookService
     public async Task<Book> AddBookAsync(Book book)
     {
         // Business rules
-        if (string.IsNullOrWhiteSpace(book.Title))
-            throw new ArgumentException("Book title is required");
+        //if (string.IsNullOrWhiteSpace(book.Title))
+        //    throw new ArgumentException("Book title is required");
 
-        if (string.IsNullOrWhiteSpace(book.ISBN))
-            throw new ArgumentException("ISBN is required");
+        //if (string.IsNullOrWhiteSpace(book.ISBN))
+        //    throw new ArgumentException("ISBN is required");
 
-        if (book.PublicationYear < 1440 || book.PublicationYear > DateTime.Now.Year)
-            throw new ArgumentException($"Publication year must be between 1440 and {DateTime.Now.Year}");
+        //if (book.PublicationYear < 1440 || book.PublicationYear > DateTime.Now.Year)
+        //    throw new ArgumentException($"Publication year must be between 1440 and {DateTime.Now.Year}");
 
-        if (!await _bookRepository.IsISBNUniqueAsync(book.ISBN))
-            throw new ArgumentException($"A book with ISBN {book.ISBN} already exists");
+        //if (!await _bookRepository.IsISBNUniqueAsync(book.ISBN))
+        //    throw new ArgumentException($"A book with ISBN {book.ISBN} already exists");
 
-        if (!await _categoryRepository.ExistsAsync(book.CategoryId))
-            throw new ArgumentException($"Category with ID {book.CategoryId} not found");
+        //if (!await _categoryRepository.ExistsAsync(book.CategoryId))
+        //    throw new ArgumentException($"Category with ID {book.CategoryId} not found");
 
-        return await _bookRepository.AddAsync(book);
+        //return await _bookRepository.AddAsync(book);
     }
 
     public async Task<Book?> UpdateBookAsync(int id, Book book)

@@ -1,4 +1,12 @@
 <Solution>
+  <Folder Name="/.github/" />
+  <Folder Name="/.github/Wrokflow/">
+    <File Path="ci.yml" />
+  </Folder>
+  <Folder Name="/Solution Items/">
+    <File Path=".gitignore" />
+    <File Path="readme.md" />
+  </Folder>
   <Project Path="LibraryManager.Api/LibraryManager.Api.csproj" />
   <Project Path="LibraryManager.Core/LibraryManager.Core.csproj" />
   <Project Path="LibraryManager.IntegrationTests/LibraryManager.IntegrationTests.csproj" />
