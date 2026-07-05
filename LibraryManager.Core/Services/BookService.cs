@@ -41,8 +41,8 @@ public class BookService : IBookService
         if (string.IsNullOrWhiteSpace(book.ISBN))
             throw new ArgumentException("ISBN is required");
 
-        if (book.PublicationYear < 1440 || book.PublicationYear > DateTime.Now.Year)
-            throw new ArgumentException($"Publication year must be between 1440 and {DateTime.Now.Year}");
+        if (book.PublicationYear < 2000 || book.PublicationYear > DateTime.Now.Year)
+            throw new ArgumentException($"Publication year must be between 2000 and {DateTime.Now.Year}");
 
         if (!await _bookRepository.IsISBNUniqueAsync(book.ISBN))
             throw new ArgumentException($"A book with ISBN {book.ISBN} already exists");
