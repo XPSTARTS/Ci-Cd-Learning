@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="LibraryManager.Api/LibraryManager.Api.csproj" />
+  <Project Path="LibraryManager.Core/LibraryManager.Core.csproj" />
+  <Project Path="LibraryManager.IntegrationTests/LibraryManager.IntegrationTests.csproj" />
+  <Project Path="LibraryManager.UnitTests/LibraryManager.UnitTests.csproj" />
+</Solution>

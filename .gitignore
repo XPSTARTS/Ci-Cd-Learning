@@ -1,0 +1,46 @@
+# Create the .gitignore file with content
+@"
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.userprefs
+
+# Build results
+bin/
+obj/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+
+# NuGet
+*.nupkg
+**/[Pp]ackages/*
+!**/[Pp]ackages/build/
+*.nuget.props
+*.nuget.targets
+project.lock.json
+
+# Test results
+TestResults/
+*.trx
+*.coverage
+
+# .NET Core
+project.lock.json
+
+# Rider
+.idea/
+
+# VS Code
+.vscode/
+
+# macOS
+.DS_Store
+"@ | Out-File -FilePath .gitignore -Encoding UTF8
+
+# Verify it was created
+Get-ChildItem -Force | Select-Object Name
