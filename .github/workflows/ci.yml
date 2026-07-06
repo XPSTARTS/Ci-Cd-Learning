@@ -30,3 +30,12 @@ jobs:
     
     - name: Run Integration Tests
       run: dotnet test LibraryManager.IntegrationTests/LibraryManager.IntegrationTests.csproj --no-build --configuration Release
+    
+    - name: Publish API
+      run: dotnet publish LibraryManager.Api/LibraryManager.Api.csproj --configuration Release --no-build --output ./publish
+    
+    - name: Upload artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: library-manager-api
+        path: ./publish
