@@ -44,7 +44,7 @@ public class InMemoryBookRepository : IBookRepository
         existing.IsAvailable = book.IsAvailable;
         existing.CategoryId = book.CategoryId;
 
-        return Task.FromResult(existing);
+        return Task.FromResult<Book?>(existing);
     }
 
     public Task<bool> DeleteAsync(int id)
