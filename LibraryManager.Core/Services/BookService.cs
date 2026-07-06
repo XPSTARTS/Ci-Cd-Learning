@@ -34,7 +34,7 @@ public class BookService : IBookService
 
     public async Task<Book> AddBookAsync(Book book)
     {
-        // Business rules
+        // Business rules are here
         if (string.IsNullOrWhiteSpace(book.Title))
             throw new ArgumentException("Book title is required");
 
