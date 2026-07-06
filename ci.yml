@@ -43,6 +43,7 @@ jobs:
     - name: Deploy to Railway
       run: |
         curl -fsSL https://railway.app/install.sh | sh
-        railway up --service bountiful-happiness
+        cd ./publish
+        railway up
       env:
         RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
